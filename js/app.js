@@ -7,6 +7,8 @@ let game = null;
 
 const btnReset = document.getElementById('btn__reset');
 const qwerty = document.getElementById('qwerty');
+const button = document.querySelectorAll('.key');
+
 
 
 btnReset.addEventListener('click',  () => {
@@ -17,10 +19,10 @@ btnReset.addEventListener('click',  () => {
 
 
 qwerty.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
         game.handleInteraction(e);
+    }
 });
 
-qwerty.addEventListener('keypress', (e) => {
-    game.handleInteraction(e);
-});
+
 
