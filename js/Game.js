@@ -132,7 +132,7 @@ class Game {
 
         // Remove Class from buttons and enable them
         let buttons = document.querySelectorAll('#qwerty button');
-        for (let m = 0; m < buttons.length; m++) {
+        for (let m = 0; m <= buttons.length; m++) {
                 buttons[m].disabled = false;
                 buttons[m].classList.remove('chosen');
                 buttons[m].classList.remove('wrong');   
